@@ -38,3 +38,6 @@ ORDER BY
     game_name ASC
 LIMIT 100000
 ````
+Labels:
+Playable: The ideal state. High compatibility, good speed, and minimal to no bugs.
+The game passes the title screen but may have issues (crashes, bad audio, low FPS) that prevent a normal gameplay experience. 
