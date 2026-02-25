@@ -1,7 +1,7 @@
 # My-Asus-ROG-Ally-Z1e
 Anything I'll note worthy for my My-Asus-ROG-Ally-Z1e
 =
-Ryujinx Compatible Games CSV File:
+Ryujinx Compatible Games CSV File: https://github.com/SpaceIgniter/My-Asus-ROG-Ally-Z1e/blob/Ryujinx-Emulator/games.csv  
 https://play.clickhouse.com/play
 ````
 SELECT
