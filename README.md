@@ -1,7 +1,9 @@
 # My-Asus-ROG-Ally-Z1e
 Anything I'll note worthy for my My-Asus-ROG-Ally-Z1e
 =
-Ryujinx Compatible Games CSV File:
+Ryujinx Compatible Games CSV File: https://github.com/SpaceIgniter/My-Asus-ROG-Ally-Z1e/blob/Ryujinx-Emulator/games.csv  
+
+This dataset was acquired using the following Clickhouse query:  
 https://play.clickhouse.com/play
 ````
 SELECT
@@ -38,3 +40,6 @@ ORDER BY
     game_name ASC
 LIMIT 100000
 ````
+Labels:  
+playable: The ideal state. High compatibility, good speed, and minimal to no bugs.  
+ingame: The game passes the title screen but may have issues (crashes, bad audio, low FPS) that prevent a normal gameplay experience.
