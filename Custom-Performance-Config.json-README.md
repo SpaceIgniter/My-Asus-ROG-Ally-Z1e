@@ -25,6 +25,7 @@
 | **docked_mode** | False → True | **The Visual Fix:** High-quality 1080p internal assets for a crisp image. |
 | **scaling_filter** | Bilinear → FSR | **The Clarity Fix:** AMD FidelityFX Super Resolution for sharp handheld play. |
 | **start_no_ui & fullscreen** | OFF → ON | **The Handheld Fix:** True console-like, plug-and-play experience. |
+
 > ⚠️ **Note on Stability:** `HostMappedUnsafe` is used for maximum performance. If a specific game crashes, change **Memory Manager Mode** to `HostMapped` in **Options > Settings > System**.  
 
 ## Philosophy
