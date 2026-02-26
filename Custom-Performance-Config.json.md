@@ -2,7 +2,7 @@ Ryujinx Config.json file - location = Open Ryujinx > Click on the File Menu Opti
 
 The File is a highly optimised AI-assisted Config file that is tweaked for a ROG Ally Z1e specifically. Insane performance results. tested in highly demanding titles.  
 
-Z1 Extreme Optimized Config: The Changes  
+Asus ROG Ally Z1 Extreme Optimised Config.json: The Changes  
 
 | Setting                         | Change                      | Reasoning                                                                                                                                                   |
 |---------------------------------|-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
