@@ -6,7 +6,7 @@
 
 Ryujinx Config.json file - location = Open Ryujinx > Click on the File Menu Option > Choose Open Ryujinx Folder (*Backup original Ryujinx Config.json file first*) > Paste downloaded Config.json file in same directory, replace current Config.json  
 
-The File is a highly optimised AI-assisted Config file that is tweaked for a ROG Ally Z1e specifically. Insane performance results. tested in highly demanding titles.
+The File is a highly optimised AI-assisted Config file that is tweaked for a ROG Ally Z1e specifically. Insane performance results, tested in highly demanding titles.
 
 ## Expected Performance Improvements
 
