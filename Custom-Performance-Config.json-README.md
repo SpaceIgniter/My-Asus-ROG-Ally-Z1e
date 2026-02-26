@@ -1,43 +1,30 @@
 # Ryujinx Custom Performance Config for ROG Ally Z1 Extreme
-
-**Device Compatibility**: ROG Ally Z1 Extreme only. This config leverages RDNA3-specific features and may not work optimally on other handhelds.
-
-## Installation Instructions
-
-Ryujinx Config.json file - location = Open Ryujinx > Click on the File Menu Option > Choose Open Ryujinx Folder (*Backup original Ryujinx Config.json file first*) > Paste downloaded Config.json file in same directory, replace current Config.json  
-
-The File is a highly optimised AI-assisted Config file that is tweaked for a ROG Ally Z1e specifically. Insane performance results, tested in highly demanding titles.
-
-## Expected Performance Improvements
-
-- **Eliminated shader compilation stutters** during gameplay
-- **Smooth frame pacing** on the 120Hz display
-- **Reduced input latency** via VRR (Variable Refresh Rate)
-- **Console-like plug-and-play experience** with no desktop UI
-- **Sharper visuals** with FSR upscaling
-- **Consistent performance** in demanding titles like Tears of the Kingdom
-
-## Asus ROG Ally Z1 Extreme Optimised Config.json: The Changes
-
-| Setting                         | Change                      | Reasoning                                                                                                                                                   |
-|---------------------------------|-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| graphics_backend_multithreading | OFF → ON                    | The Shader Fix: Offloads shader compilation to the Z1E's extra CPU threads. This eliminates the "Stop-and-Build" stutters.                                  |
-| tick_scalar                     | 100 → 50                    | The Timing Fix: Aligns the emulator's internal clock with the Ally's high-refresh hardware. Resolves micro-jitters/frame-pacing issues.                     |
-| enable_vsync & vsync_mode       | ON → OFF (0)                | The VRR Fix: Disabling VSync while using a 120Hz interval allows the ROG Ally's Variable Refresh Rate to handle frame delivery for zero-latency smoothness. |
-| custom_vsync_interval           | 60 → 120                    | The Cap Fix: Sets the "ceiling" for the VRR window, ensuring the game stays within the Ally's optimal sync range.                                           |
-| memory_manager_mode             | Software → HostMappedUnsafe | The Speed Fix: Bypasses software checks to allow the GPU to access memory at native speeds. Essential for consistent 30-60FPS in TotK.                      |
-| docked_mode                     | False → True                | The Visual Fix: Forces the game to use 1080p internal assets, making it look sharp on monitors while the Ally's Z1E easily handles the load.                |
-| scaling_filter                  | Bilinear → FSR              | The Clarity Fix: Uses AMD's FidelityFX Super Resolution to keep the image crisp even when undocked.                                                         |
-| start_no_ui & fullscreen        | OFF → ON                    | The Handheld Fix: Launches the game as a console experience; no mouse or keyboard required to start playing.                                                |
-
-## ⚠️ Important Note on HostMappedUnsafe
-
-The **memory_manager_mode** setting is set to "HostMappedUnsafe" for maximum performance, but this may cause crashes or stability issues in some games. If you experience instability:
-
-1. Open Ryujinx
-2. Go to Options > Settings > System
-3. Change Memory Manager Mode to **"HostMapped"** (safer, still fast) or **"SoftwarePageTable"** (most compatible)
-
+**Device Compatibility:** ROG Ally Z1 Extreme only. This config leverages RDNA3-specific features and high-refresh VRR logic.
+## 🛠 Prerequisites
+* **VRAM Setting:** Set your ROG Ally VRAM to **6GB** (or "Auto") in Armoury Crate/BIOS. *The default 4GB will cause stutters even with this config.*
+* **Drivers:** Ensure you are on the latest Asus/AMD GPU drivers.
+## 📥 Installation Instructions
+1. Open Ryujinx.
+2. Click **File** > **Open Ryujinx Folder**.
+3. **Backup** your original `Config.json` (rename it to `Config.json.bak`).
+4. Paste the downloaded `Config.json` into this directory, replacing the current file.
+5. Restart Ryujinx.
+## 🚀 Expected Improvements
+* **Eliminated Shader Stutter:** Smooth gameplay even when entering new areas.
+* **Perfect Frame Pacing:** Optimised for the Ally's 120Hz display.
+* **Low Latency:** Uses VRR (Variable Refresh Rate) for a "snappy" controller feel.
+* **Console Experience:** Launches straight into the game, fullscreen, with no desktop UI.
+## 🔍 The Changes: Stock vs. Optimised
+| Setting | Change | Reasoning |
+| :--- | :--- | :--- |
+| **graphics_backend_multithreading** | OFF → ON | **The Shader Fix:** Offloads compilation to extra CPU threads. |
+| **tick_scalar** | 100 → 50 | **The Timing Fix:** Aligns emulator clock with 120Hz hardware to stop micro-jitters. |
+| **enable_vsync & vsync_mode** | ON → OFF (0) | **The VRR Fix:** Allows the Ally's VRR to handle frame delivery for zero-latency. |
+| **custom_vsync_interval** | 60 → 120 | **The Cap Fix:** Sets the ceiling for the VRR window. |
+| **memory_manager_mode** | Software → HostMappedUnsafe | **The Speed Fix:** Bypasses software checks for native GPU memory speeds. |
+| **docked_mode** | False → True | **The Visual Fix:** High-quality 1080p internal assets for a crisp image. |
+| **scaling_filter** | Bilinear → FSR | **The Clarity Fix:** AMD FidelityFX Super Resolution for sharp handheld play. |
+| **start_no_ui & fullscreen** | OFF → ON | **The Handheld Fix:** True console-like, plug-and-play experience. |
+> ⚠️ **Note on Stability:** `HostMappedUnsafe` is used for maximum performance. If a specific game crashes, change **Memory Manager Mode** to `HostMapped` in **Options > Settings > System**.
 ## Philosophy
-
-This configuration transitions Ryujinx from a generic 'Desktop PC' emulator into a console-like experience specifically tuned for the ROG Ally's RDNA3 GPU and 120Hz VRR display. It prioritises background shader building and frame-pacing stability over standard compatibility defaults.
+This configuration transitions Ryujinx from a generic 'Desktop PC' emulator into a console-like experience specifically tuned for the ROG Ally's RDNA3 GPU. It prioritises background shader building and frame-pacing stability over standard compatibility defaults.
