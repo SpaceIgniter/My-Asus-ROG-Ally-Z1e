@@ -15,4 +15,4 @@ Asus ROG Ally Z1 Extreme Optimised Config.json: The Changes
 | scaling_filter                  | Bilinear → FSR              | The Clarity Fix: Uses AMD’s FidelityFX Super Resolution to keep the image crisp even when undocked.                                                         |
 | start_no_ui &amp; fullscreen    | OFF → ON                    | The Handheld Fix: Launches the game as a console experience; no mouse or keyboard required to start playing.                                                |
 
-This configuration transitions Ryujinx from a generic 'Desktop PC' emulator into a console-like experience specifically tuned for the ROG Ally’s RDNA3 GPU and 120Hz VRR display. It prioritizes background shader building and frame-pacing stability over standard compatibility defaults.
+This configuration transitions Ryujinx from a generic 'Desktop PC' emulator into a console-like experience specifically tuned for the ROG Ally’s RDNA3 GPU and 120Hz VRR display. It prioritises background shader building and frame-pacing stability over standard compatibility defaults.
