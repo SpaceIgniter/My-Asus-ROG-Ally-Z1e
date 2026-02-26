@@ -13,8 +13,11 @@ Set WshShell = Nothing
 
 **Step 4:** Double-click the VBS file to launch Ryujinx - no CMD window will appear
 
-**Step 5 (Optional):** Create a shortcut to the VBS file and:
-- Right-click → Properties
+**Step 5 (Optional):** Create a shortcut with the Ryujinx icon:
+- Right-click on `Ryujinx_NoConsole.vbs`
+- Select "Create shortcut"
+- Right-click the new shortcut → Properties
 - Click "Change Icon"
-- Browse to `Ryujinx.exe` and select its icon
-- Pin this shortcut to your taskbar/start menu
+- Click "Browse" and navigate to `Ryujinx.exe`
+- Select the Ryujinx icon and click OK
+- Move the shortcut to your Desktop or pin it to your taskbar/start menu
